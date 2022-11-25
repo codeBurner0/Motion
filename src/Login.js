@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {auth} from "react";
+import {auth} from "./FireBase";
 import './Login.css'
 import {login} from "./features/userSlice";
 import LoginImage from './Images/login.png'
