@@ -12,12 +12,12 @@ const user = useSelector(selectUser)
   return (
     <div className="app">
       <Header />
-      {!user ?(<Login /> ):(
+      {/* {!user ?(<Login /> ):( */}
       <div className='app_body'>
         <Sidebar />
         <Feed />
       </div>
-         )}
+         {/* )} */}
     </div>
   );
 }
