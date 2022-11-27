@@ -6,9 +6,18 @@
     text-align: center;
     height: fit-content;
 }
-
 .sidebar_avatar {
     margin-bottom: 10px;
+}
+.AuthenticatedUser{
+    border: px solid black;
+    border-radius: 40px;
+    height:50px;
+}
+.AuthenticatedUser1{
+    border: 2px solid black;
+    border-radius: 40px;
+    height:30px;
 }
 
 .sidebar_top > h4{

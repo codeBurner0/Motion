@@ -12,24 +12,23 @@
 //     const dispatch =useDispatch();
 // const loginToApp =(e)=>{
 //     e.preventDefault();
-//     auth.signInWithEmailAndPassword(email,password).then(
-//       (userAuth) =>{
-//         dispatch(login({
-//         email:userAuth.user.email,
-//         uid:userAuth.user.uid,
-//         displayName:userAuth.user.uid,
-//         profileUrl:userAuth.user.profileURL,
-//         })
-//         );
-//       }
-//     )
+//     // auth.signInWithEmailAndPassword(email,password).then(
+//     //   (userAuth) =>{
+//     //     dispatch(login({
+//     //     email:userAuth.user.email,
+//     //     uid:userAuth.user.uid,
+//     //     displayName:userAuth.user.uid,
+//     //     profileUrl:userAuth.user.profileURL,
+//     //     })
+//     //     );
+//     //   }
+//     // )
 // };
 // const register = () => {
 //   if(!name){
 //     return alert("Please enter a full name!");
 //   }
-
-//   auth.createUserWithEmailAndPassword(email,password).then((userAuth)=>{
+//   auth.createUserWithEmailAndPassword(email, password).then((userAuth)=>{
 //     userAuth.user.updateProfile(
 //       {displayName:name,
 //       photoURL:profilePic,}
@@ -39,9 +38,9 @@
 //         email:userAuth.user.email,
 //         uid:userAuth.user.uid,
 //         displayName:name,
-//         photoUrl:profilePic
+//         photoUrl:profilePic,
 //       }));
-//     })
+//     });
 //   }).catch((error) => alert(error));
 // };
 
@@ -56,7 +55,8 @@
 //         <button type="submit" onClick={loginToApp} >Sign In</button>
 //       </form>
 
-//       <p>Not a member?
+//       <p>
+//         Not a member?{""}
 //         <span className='login_register' onClick={register}>Register Now</span>
 //       </p>
 //     </div>

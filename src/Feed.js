@@ -9,10 +9,13 @@ import EventNoteIcon from '@mui/icons-material/EventNote';
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import { db } from './FireBase';
 import firebase from 'firebase';
+import FlipMove from 'react-flip-move';
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Feed() {
   const [input,setInput] = useState([]);
   const [posts,setPosts] = useState([]);
+  const { user, isAuthenticated} = useAuth0();
   useEffect(() =>{
     db.collection("post").orderBy('timestamp','desc').onSnapshot(snapshot =>(
       setPosts(snapshot.docs.map(doc =>(
@@ -24,10 +27,10 @@ export default function Feed() {
   const sendPost= (e) => {
     e.preventDefault();
     db.collection('post').add({
-      name:'Ankit Anand',
+      name:user.name,
       description:'this is text',
       message:input,
-      photoUrl:"",
+      photoUrl:user.picture,
       timestamp:firebase.firestore.FieldValue.serverTimestamp(),
     });
     setInput("");
@@ -49,6 +52,7 @@ export default function Feed() {
            <InputOption Icon={CalendarViewDayIcon} title="Write Article" color="green"/>
         </div>
       </div>
+      <FlipMove>
       {posts.map(({id, data:{name, description, message,photoUrl}}) =>(
         <Post 
         key={id}
@@ -58,6 +62,7 @@ export default function Feed() {
         photoUrl={photoUrl}
         />
       ))}
+      </FlipMove>
       <Post name='Ankit Anand' description='This is a test' message='Wow! This worked'/>
 
       

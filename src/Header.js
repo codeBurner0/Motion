@@ -9,7 +9,11 @@ import { BusinessCenterRounded, SupervisorAccountRounded } from '@mui/icons-mate
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MessageIcon from '@mui/icons-material/Message';
 import { Button } from '@mui/material';
+import { useAuth0 } from "@auth0/auth0-react";
 function Header() {
+  const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
+  const { user, isAuthenticated} = useAuth0();
   return (
     <div className='header'>
         <div className='header_left'>
@@ -29,12 +33,19 @@ function Header() {
             <HeaderOption Icon={BusinessCenterRounded} title='Jobs' />
             <HeaderOption Icon={MessageIcon} title='Messaging' />
             <HeaderOption Icon={NotificationsIcon} title='Notifications' />
-            <HeaderOption avatar={img2} title='Ankit Anand' />
+            {/* <HeaderOption avatar={img2} title='Me' /> */}
         </div>
         <div>
-          <form action='http://localhost:4000/'>
+          {/* <form action='http://localhost:4000/'>
             <Button type='submit'>Chat</Button>
-          </form>
+          </form> */}
+          
+          {isAuthenticated && (<div><img className="user_image" src={user.picture} alt={user.name} /><span>{user.name}</span></div>)}
+          {isAuthenticated ? <button onClick={() => logout({ returnTo: window.location.origin })}>
+      Log Out
+    </button> : <button onClick={() => loginWithRedirect()}>Log In</button>}
+          
+          
         </div>
     </div>
   )
