@@ -3,7 +3,7 @@ import "./HeaderOption.css";
 import Avatar from '@mui/material/Avatar';
 import { useAuth0 } from "@auth0/auth0-react";
 function HeaderOption({avatar, Icon, title}) {
-  const { user, isAuthenticated} = useAuth0();
+  // const { user, isAuthenticated} = useAuth0();
   return (
     <div className='headerOption'>
       {Icon && <Icon className='headerOption_icon'/>}

@@ -1,0 +1,55 @@
+.widgets{
+    position: sticky;
+    top: 80px;
+    flex: 0.2;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    height: fit-content;
+    padding-bottom: 10px;
+}
+.button{
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 2px;
+    width: 150px;
+    background: #ecf1eb;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    color: #2ba000;
+    box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    box-shadow: 10px 10px 10px  blue,-10px -10px -10px  pink;
+}
+.widgets_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.widgets_header >h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+.widgets_article{
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+}
+.widgets_article:hover{
+    background-color: rgb(240, 230, 230);
+}
+.widgets_articleleft{
+    color: #0177b7;
+    margin-right: 5px;
+}
+
+.widgets_articleright > h4{
+    font-size: 14px;
+}
+.widgets_articleright >p{
+    font-size: 12px;
+    color: gray;
+}

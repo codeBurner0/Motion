@@ -3,7 +3,7 @@
     top: 0;
     display: flex;
     background-color: white;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-bottom: 0.1px solid lightgray;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -17,6 +17,7 @@
     height:30px;
 }
 .header_left{
+    margin-left: 30px;
     display: flex;
 }
 .header_left > img{
@@ -41,6 +42,7 @@
     background: none;
 }
 .header_right{
+    margin-left: 200px;
     display: flex;
 }
 
@@ -66,3 +68,17 @@
     background-clip: text;
     color: transparent;
   }
+  .button1{
+    margin-right: 50px;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 2px;
+    width: 150px;
+    background: #ecf1eb;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    color: #2ba000;
+    box-shadow: 10px 5px 5px rgba(255, 128, 0, 0.646);
+}

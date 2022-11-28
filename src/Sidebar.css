@@ -1,10 +1,19 @@
-.sidebar{
+/* .sidebar{
     position: sticky;
     top: 80x;
     flex: 0.2;
     border-radius: 10px;
     text-align: center;
     height: fit-content;
+} */
+.sidebar{
+    position: sticky;
+    top: 80px;
+    flex: 0.2;
+    border-radius: 10px;
+    height: fit-content;
+    text-align: center;
+    padding-bottom: 10px;
 }
 .sidebar_avatar {
     margin-bottom: 10px;

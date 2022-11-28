@@ -1,66 +1,36 @@
-// import React, { useState } from 'react'
-// import {auth} from "./FireBase";
-// import './Login.css'
-// import {login} from "./features/userSlice";
-// import LoginImage from './Images/login.png'
-// import { useDispatch } from 'react-redux';
-// function Login() {
-//     const[email,setEmail]=useState("");
-//     const[password,setPassword]=useState("");
-//     const[name,setName]=useState("");
-//     const[profilePic,setProfilePic]=useState("");
-//     const dispatch =useDispatch();
-// const loginToApp =(e)=>{
-//     e.preventDefault();
-//     // auth.signInWithEmailAndPassword(email,password).then(
-//     //   (userAuth) =>{
-//     //     dispatch(login({
-//     //     email:userAuth.user.email,
-//     //     uid:userAuth.user.uid,
-//     //     displayName:userAuth.user.uid,
-//     //     profileUrl:userAuth.user.profileURL,
-//     //     })
-//     //     );
-//     //   }
-//     // )
-// };
-// const register = () => {
-//   if(!name){
-//     return alert("Please enter a full name!");
-//   }
-//   auth.createUserWithEmailAndPassword(email, password).then((userAuth)=>{
-//     userAuth.user.updateProfile(
-//       {displayName:name,
-//       photoURL:profilePic,}
-//     )
-//     .then(()=>{
-//       dispatch(login({
-//         email:userAuth.user.email,
-//         uid:userAuth.user.uid,
-//         displayName:name,
-//         photoUrl:profilePic,
-//       }));
-//     });
-//   }).catch((error) => alert(error));
-// };
+import React from 'react'
+import "./Login.css"
+function Login() {
+  return (
+    <div>
+      
+    <div class="section">
+        <div class="circle"></div>
+        <header>
+            <img class="image" src="C:\Users\Ankit Anand\Desktop\FullStackChallenges\AnkitProjects\Project-5\images\logoWithoutBG1.png.jpg" alt=""/>
+            <ul>
+                <li><a href="#"> Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li> <a href="#"> What's New</a></li>
+                <li> <a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 class="h2">It's not just Social Media App<br/> It's <span class="span"> Motion </span></h2>
+                <p class="p">YOU ARE WHAT YOU SHARE!!!<br/>
+                    <span class="sp">A valuable tool that facilitates the sharing of ideas, thoughts and information through the building of virtual network and communities.
+                    We aim at better Customer Experience, capture their feedback and opinions, and
+                    Builds trust between businesses and their clients, helps to bridge gap and bringing people closer.</span></p>
+                    <a href="http://localhost:3000/" class="button">Explore</a><br/>
+            </div>
+            <div class="ImageBox">
+                <img src="C:\Users\Ankit Anand\Desktop\FullStackChallenges\AnkitProjects\Project-5\images\39695826.png.webp" class="startbucks" alt=""/>
+            </div>
+        </div>
+    </div>
+    </div>
+  )
+}
 
-//   return (
-//     <div className='login'>
-//       <img src={LoginImage}/>
-//       <form>
-//         <input value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="Full Name {required if registering}" />
-//         <input value={profilePic} onChange={(e)=>setProfilePic(e.target.value)} type="text" placeholder="Profile pic URL (Optional)" />
-//         <input value={email} onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Email" />
-//         <input value={password} onChange={(e)=>setPassword(e.target.value)} type="Password" placeholder="Password" />
-//         <button type="submit" onClick={loginToApp} >Sign In</button>
-//       </form>
-
-//       <p>
-//         Not a member?{""}
-//         <span className='login_register' onClick={register}>Register Now</span>
-//       </p>
-//     </div>
-//   )
-// }
-
-// export default Login
+export default Login

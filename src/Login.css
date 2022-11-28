@@ -1,49 +1,121 @@
-.login{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
     width: 100%;
-    display: grid;
-    place-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    /* background-image:  url('27.jpg'); */
-}
-
-.login > img{
-    object-fit: contain;
-    height: 130px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-
-.login >form{
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+.image{
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    height: 70px;
 }
 
-.login >form > input{
-    width: 350px;
-    height: 50px;
-    font-size: 20px;
-    padding-left: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li {
+    list-style: none;
+}
+header ul li a{
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+
+}
+.startbucks{
+    height: 400px;
+    width: 500px;
+}
+.content{
+    margin: 50px;
+    margin-top: 100px;
+  
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textbox{
+    position: relative;
+    max-width: 600px;
+    
+}
+.h2{
+    color: #333;
+    font-size: 3em;
+    line-height: 1.4em;
+    font-weight: 500;
+    font-family: forte;
+}
+.p{
+    color: #333;
+    font-size: 1.4em;
+    line-height: 1em;
+}
+.span{
+    background-image: linear-gradient(to left, rgb(152, 4, 152), orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 45px;
+    font-weight: 900;
 }
 
-.login >form > button{
-    width: 365px;
-    height: 50px;
-    font-size: large;
-    color: #fff;
-    background-color: #0074b1;
-    border-radius: 5px;
-}
-
-.login_register{
-    color: #0177b7;
-    cursor: pointer;
-}
-
-.login >p{
+.button{
+    display: inline-block;
     margin-top: 20px;
+    padding: 8px 20px;
+    background: linear-gradient(to left, rgb(152, 4, 152), orange, red);
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
 }
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(152, 4, 152), orange, red);
+    clip-path: circle(600px at right 800px);
+}
+.section {
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 4px rgba(12,12,12,0.2);
+  }
+  .sp{
+    color: #333;
+    font-size: .7em;
+    line-height: 1em;
+  }

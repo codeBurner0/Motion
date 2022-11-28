@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Header.css";
 import SearchIcon from '@mui/icons-material/Search';
-import img1 from './Images/MainLogo.png'
-import img2 from './Images/face.png'
+import img1 from './Images/MainLogo.png';
+import img2 from './Images/face.png';
 import HeaderOption from './HeaderOption';
 import HouseRoundedIcon from '@mui/icons-material/HouseRounded';
 import { BusinessCenterRounded, SupervisorAccountRounded } from '@mui/icons-material';
@@ -36,16 +36,10 @@ function Header() {
             {/* <HeaderOption avatar={img2} title='Me' /> */}
         </div>
         <div>
-          {/* <form action='http://localhost:4000/'>
-            <Button type='submit'>Chat</Button>
-          </form> */}
-          
           {isAuthenticated && (<div><img className="user_image" src={user.picture} alt={user.name} /><span>{user.name}</span></div>)}
-          {isAuthenticated ? <button onClick={() => logout({ returnTo: window.location.origin })}>
+          {isAuthenticated ? <button className='button1' onClick={() => logout({ returnTo:window.location.origin})}>
       Log Out
-    </button> : <button onClick={() => loginWithRedirect()}>Log In</button>}
-          
-          
+    </button> : <button className='button1' onClick={() => loginWithRedirect()}>Log In</button>}
         </div>
     </div>
   )
