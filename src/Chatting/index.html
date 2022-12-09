@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Chat App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <style>
+        body {
+            background-image: url("icons/background.png");
+        }
+
+        main div.container div.chat-window {
+            background-image: url("icons/72.jpg");
+        }
+
+        main div.container div.users-window {
+            background-image: url("icons/IMG_1.png");
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="icons/logo.png" alt="" width="35px">
+                <h1>Motion Chat</h1>
+            </div>
+            <button type="button" onclick="show_hide()">
+                <img src="icons/option.png" alt="" width="50px">
+            </button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="users-count">0</h4>
+                </div>
+                <div class="users-list"></div>
+            </div>
+            <div class="chat-window">
+                <div class="chats"></div>
+                <div class="user-input">
+                    <input type="text" id="user-msg" placeholder="Type your message....">
+                    <button type="button" id="user-send">SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var uwindow = document.querySelector('.users-window');
+        function show_hide() {
+            if (uwindow.style.display == "block") {
+                uwindow.style.display = "none";
+            }
+            else {
+                uwindow.style.display = "block";
+            }
+        }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+
+</html>
