@@ -8,6 +8,11 @@
     height: fit-content;
     padding-bottom: 10px;
 }
+.a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+}
 .button{
     margin-left: 40px;
     font-size: 18px;
